@@ -1,3 +1,5 @@
+import sys
+
 def fib(n):
     if n == 1:
         return 1
@@ -21,12 +23,19 @@ def check(a):
                 break
 
 
-print("Введите число: ")
 while True:
+    print("Введите число: ")
     try:
         a = float(input())
-        break
     except ValueError:
         print("Введенный элемент не является числом, повторите ввод: ")
-
-check(a)
+        continue
+    check(a)
+    while True:
+        print("0 - покинуть программу\n1 - продолжить")
+        s = input()
+        match s:
+            case "1":
+                break
+            case "0":
+                sys.exit()
