@@ -111,11 +111,11 @@ def exponintination():
     print("Введите второй элемент: ")
     while True:
         try:
-            b = float(input())
+            b = int(input())
             break
-        except ValueError:
+        except ValueError or TypeError:
             print("Введенный элемент не является числом, введите второй элемент: ")
-    print("Первый элемент, возведенный в степень: ", a**b)
+    print("Первый элемент, возведенный в", b, "степень: ", a**b)
     print("----------------------------------------------")
 
 
