@@ -1,0 +1,34 @@
+strng = "Команда print выводит строку..."
+print(strng)
+print("Это 5-й символ строки: ", strng[4])
+
+print("\nСоздание класса, состоящего из целого и дробного чисел: ")
+
+
+class numb:
+    intgr = 54
+    flt = 37.6
+
+    def printNumb():
+        print(numb.intgr, "; ", numb.flt)
+
+
+numb.printNumb()
+
+List = []
+print("\nПроверка списка List на принадлежность к его типу: ", type(List))
+
+print("\nИзменение элементов кортежа при помощи цикла for: ")
+
+
+def add(name, num):
+    for i in range(len(name)):
+        name[i] += num
+    return name
+
+
+a = [2, 6, 1.5, 8, 0]
+print(a)
+
+b = add(a, 1)
+print(b)
